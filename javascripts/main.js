@@ -16,7 +16,7 @@ function doAjax(url, callback) {
     xmlhttp.send();
 };
 
-doAjax("/data/", function(responseText){
+doAjax("/javascripts/data/", function(responseText){
     console.log(responseText);
 });
 
