@@ -16,15 +16,11 @@ function doAjax(url, callback) {
     xmlhttp.send();
 };
 
-doAjax("/javascripts/date/", function(responseText){
+doAjax("/javascripts/data.json", function(responseText){
     console.log(responseText);
 });
 
-doAjax("/javascripts/data.json/", function(responseText){
-    console.log(responseText);
-});
-
-doAjax("/json.json/", function(responseText){
+doAjax("/json.json", function(responseText){
     console.log(responseText);
 });
 
