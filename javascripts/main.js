@@ -26,19 +26,7 @@ data("/javascripts/data.json", function(responseText){
         console.log(k + ': ' + v);        
     });*/
     console.log(responseText.length);
-    for(var k in responseText)
-    if ({}.hasOwnProperty.call(responseText, k))
-        console.log(k, " = ", responseText[k]);
 });
-
-/*data("/json.json", function(responseText){
-    document.body.innerHTML+=responseText;
-show_response = function(obj) {
-    $H(obj).each(function(v, k) {
-console.log(k + ': ' + v);        
-    });
-};
-});*/
 
 
 console.timeEnd("Array initialize");
