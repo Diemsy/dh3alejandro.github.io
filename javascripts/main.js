@@ -9,10 +9,10 @@ var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("
         //if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
-                //document.body.className = 'ok';
+                document.body.className = 'ok';
                 callback(xmlhttp.responseText);
             } else {
-                //document.body.className = 'error';
+                document.body.className = 'error';
             }
         }
     }
@@ -21,10 +21,6 @@ var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("
 }
 
 data("/javascripts/data.json", function(responseText){
-    //document.body.innerHTML+=responseText;
-    /*(responseText).each(function(v, k) {
-        console.log(k + ': ' + v);        
-    });*/
     var json = responseText;
     //var json = '{"result":true,"age":20}',
     obj = JSON.parse(json);
