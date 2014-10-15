@@ -28,4 +28,12 @@ data("/json.json", function(responseText){
     document.body.innerHTML+=responseText;
 });
 
+data("/json.json", function(responseText){
+for (var i in responseText) {
+   for (var j in responseText[i]) {
+     console.log(responseText[i][j]);
+   }
+}
+});
+
 console.timeEnd("Array initialize");
