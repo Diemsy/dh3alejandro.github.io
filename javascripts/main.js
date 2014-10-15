@@ -25,7 +25,10 @@ data("/javascripts/data.json", function(responseText){
     /*(responseText).each(function(v, k) {
         console.log(k + ': ' + v);        
     });*/
-    console.log()responseText.length;
+    console.log(responseText.length);
+    for(var k in responseText)
+    if ({}.hasOwnProperty.call(responseText, k))
+        console.log(k, " = ", responseText[k]);
 });
 
 /*data("/json.json", function(responseText){
