@@ -22,11 +22,10 @@ var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("
 
 data("/javascripts/data.json", function(responseText){
     //document.body.innerHTML+=responseText;
-    var query = [];
-    for (var key in data) {
-        query.push(key + '=' + data[key]);
-        console.log(query);
-    }
+    /*(responseText).each(function(v, k) {
+        console.log(k + ': ' + v);        
+    });*/
+    console.log()responseText.length;
 });
 
 /*data("/json.json", function(responseText){
