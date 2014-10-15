@@ -21,22 +21,22 @@ var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("
 }
 
 data("/javascripts/data.json", function(responseText){
-    document.body.innerHTML+=responseText;
-});
-
-data("/json.json", function(responseText){
-    document.body.innerHTML+=responseText;
-/*show_response = function(obj) {
-    $H(obj).each(function(v, k) {
-console.log(k + ': ' + v);        
-    });
-};*/
-var query = [];
+    //document.body.innerHTML+=responseText;
+    var query = [];
     for (var key in data) {
         query.push(key + '=' + data[key]);
     }
-console.log(query);
+    console.log(query);
 });
+
+/*data("/json.json", function(responseText){
+    document.body.innerHTML+=responseText;
+show_response = function(obj) {
+    $H(obj).each(function(v, k) {
+console.log(k + ': ' + v);        
+    });
+};
+});*/
 
 
 console.timeEnd("Array initialize");
