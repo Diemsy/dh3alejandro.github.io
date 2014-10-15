@@ -25,7 +25,12 @@ data("/javascripts/data.json", function(responseText){
     /*(responseText).each(function(v, k) {
         console.log(k + ': ' + v);        
     });*/
-    console.log(responseText.length);
+    var json = responseText;
+    //var json = '{"result":true,"age":20}',
+    obj = JSON.parse(json);
+    for (var key in obj) {
+        document.body.innerHTML+=key + ':' + obj[key]+'<br>';
+    }
 });
 
 
