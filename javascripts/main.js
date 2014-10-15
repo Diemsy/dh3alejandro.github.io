@@ -25,8 +25,8 @@ data("/javascripts/data.json", function(responseText){
     var query = [];
     for (var key in data) {
         query.push(key + '=' + data[key]);
+        console.log(query);
     }
-    console.log(query);
 });
 
 /*data("/json.json", function(responseText){
