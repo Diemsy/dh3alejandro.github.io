@@ -2,6 +2,10 @@ console.time("Array initialize");
 
 console.log('This would be the main JS file.');
 
+function getxhr(){
+		return (typeof XDomainRequest != 'undefined' && typeof ArrayBuffer == 'undefined') ?
+		       new XDomainRequest() : new XMLHttpRequest();
+}
 
 function data(url, callback){
 var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
