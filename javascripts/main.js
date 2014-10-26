@@ -24,6 +24,27 @@ var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("
     xmlhttp.send( null );
 }
 
+
+/*
+// get
+var xhr = new XMLHttpRequest();
+
+xhr.open('GET', url);
+xhr.onreadystatechange = function (data) {
+
+}
+xhr.send();
+
+// post
+var xhr = new XMLHttpRequest()
+
+xhr.open('POST', url);
+xhr.onreadystatechange = function (data) {
+
+}
+xhr.send({data: data});
+*/
+
 data("/javascripts/data.json", function(responseText){
     var json = responseText;
     //var json = '{"result":true,"age":20}',
